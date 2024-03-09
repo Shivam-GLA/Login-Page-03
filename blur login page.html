@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width:100vw;
+      font-family: "Potta One", system-ui;
+      /* color:white; */
+      /* /background-image:url('Jujustu Kiesen.jpg');/ */
+      /* background-image: url(bg2.jpeg); */
+      background: url("/ML/img/bg.15.jpg")no-repeat center center/cover;
+      /* background-repeat: no-repeat; */
+      /* background-size: cover; */
+      /* opacity: 0.9; */
+      /* background: url(bg1.jpeg)no-repeat; */
+      /* background-image: url(/imgbg.jpeg); */
+      /* /background-color: black; */
+      /* background-size: cover; */
+    }
+
+    .login-container {
+      /* background-color: rgba(83, 76, 76, 0.8); */
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      /* filter:blur(2px); */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      color: #423b3b; 
+    }
+
+    .login-container h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      color: #171717;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline:none;
+      /* background: none; */
+    }
+
+    .login-form button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #45a049;
+    }
+    h1{
+        color:white;
+    }
+    #login a{
+        color:white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>ANIFLIX</h1>
+    <h2>Login</h2>
+    <form class="login-form" action="#" method="post" onsubmit="return validateForm()">
+      <input type="text" name="username" placeholder="Username" id="username">
+      <input type="password" name="password" placeholder="Password" id="password">
+      <button type="submit" id="login">Login</button>
+    </form>
+  </div>
+
+  <script>
+      // let login=document.getElementById("login");
+      // login.addEventListener("click",()=>{
+      //   location.href="https://google.com";
+      //   alert("hi");
+      //   window.location="https://www.google.com";
+      // })
+    console.log("hi");
+    function validateForm() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  console.log("hi",username);
+  if (username=="") {
+    alert("Please enter a username");
+    return false;
+  }
+  if (password== "") {
+    alert("Please enter a password");
+    return false;
+  }
+  return true; 
+}
+
+  </script>
+</body>
+</html>
